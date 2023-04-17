@@ -15,17 +15,21 @@
 
     <div>
       <section>
-        <h3>Navigation</h3>
-        <nav>
-          <ul>
-            <li><a href="#attendance">Attendance List</a></li>
-            <li><a href="#agenda">Meeting Agenda</a></li>
-            <li><a href="#board">Mood Board</a></li>
-            <li><a href="#audio">Cooking ASMR</a></li>
-            <li><a href="#video">Videos</a></li>
-            <li><a href="#feedback">Feedback</a></li>
-          </ul>
-        </nav>
+        <details>
+            <summary>Navigation</summary>
+            <nav>
+                <ul>
+                  <li><a href="#attendance">Attendance List</a></li>
+                  <li><a href="#agenda">Meeting Agenda</a></li>
+                  <li><a href="#restaurants">Best Restaurants</a></li>
+                  <li><a href="#board">Mood Board</a></li>
+                  <li><a href="#audio">Cooking ASMR</a></li>
+                  <li><a href="#video">Videos</a></li>
+                  <li><a href="#feedback">Feedback</a></li>
+                </ul>
+              </nav>
+        </details>
+
       </section>
     </div>
 
@@ -52,11 +56,6 @@
       <p>Today, we'll be talking about the following topics:</p>
       <ul>
         <li>The <strong>best</strong> restaurants in the San Diego area</li>
-        <ol>
-          <li>moment sushi</li>
-          <li>Cali Baguette</li>
-          <li>Hidden</li>
-        </ol>
         <li>The <strong>best</strong> sit-down coffee shops in La Jolla</li>
       </ul>
 
@@ -75,12 +74,24 @@
     <hr>
 
     <section>
+        <h3 id="restaurants">Best Restaurants in San Diego</h3>
+
+        <ol>
+            <li>moment sushi</li>
+            <li>Cali Baguette</li>
+            <li>Hidden</li>
+          </ol>
+    </section>
+
+    <hr>
+
+    <section>
       <h3 id="board">Mood Board for Social Media Platforms</h3>
       <section>
-        <img src="images/heart strawberry toast.jpeg" alt="toast with heart-shaped starwberries on top" width="200">
+        <img src="images/heart-strawberry.jpeg" alt="toast with heart-shaped starwberries on top" width="200">
         <img src="images/pancakes.jpeg" alt="souffle pancakes with berries on top" width="250">
         <br>
-        <img src="images/strawberry toast.jpeg" alt="pink-themed spread with toast and two drinks" width="250">
+        <img src="images/strawberry-toast.jpeg" alt="pink-themed spread with toast and two drinks" width="250">
         <img src="images/waffles.jpeg" alt="waffles stuffed with cream" width="200">
       </section>
     </section>
@@ -108,12 +119,49 @@
 
     <section>
       <h3 id="feedback">Feedback?</h3>
-      <form>
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname">
-      </form>
+      <fieldset>
+        <form>
+            <p>What is your name?</p>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname">
+
+            <br>
+
+            <p>How did you find this website?</p>
+            <input type = "checkbox" name = "CSE110" value = "on"> CSE 110 Instructor/Student
+            <input type = "checkbox" name = "physics" value = "on"> Other
+
+            <br>
+
+            <p>Do you like food?</p>
+            <select name = "dropdown">
+                <option value = "Yes" selected>Yes</option>
+                <option value = "No">No</option>
+                <option value = "Maybe">Maybe</option>
+             </select>
+
+            <p>What is your favorite cuisine?</p>
+            <label for="cuisine-choice">Choose an option:</label>
+            <input list="cuisine-choices" id="cuisine-choice" name="cuisine-choice">
+
+            <datalist id="cuisine-choices">
+                <option value="Italian">
+                <option value="Chinese">
+                <option value="Indian">
+                <option value="American">
+                <option value="French">
+                <option value="Thai">
+                <option value="Other">
+            </datalist>
+        </form>
+
+        <p>Additional Comments?</p>
+        <textarea row ="5" cols="100">LMK what you think!</textarea>
+        <br><br>
+        <button type="button">Submit Form</button>
+      </fieldset>
     </section>
 
     <hr>
